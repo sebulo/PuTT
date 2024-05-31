@@ -1,0 +1,21 @@
+target: data/images/girl_downsampled_images/girl_2k.png
+base_config: configs/base_configs/2d_base_config_subset_sampling.yaml
+
+model: QTT
+end_reso: 2048
+lr_arr: [ 0.005]
+
+init_reso_arr:
+    - 16
+    - 32
+    - 64
+    - 128
+    - 256
+    - 512
+    - 1024
+    - 2048
+    - 4096
+max_ranks_arr:
+    - 150
+
+iterations_for_upsampling_arr: [[64,128,256,512,1024, 1536, 2560],[64,128,256,512,1024, 1536, 2048], [64,128,256,512,1024, 2048],[64, 128,256,512,1024],[128,256,512,1024],[256,512,1024], [512,1024], [1024], []]

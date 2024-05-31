@@ -1,0 +1,18 @@
+target: data/3d_data/downsampled_volumnes_isotropic/isotropic1024.npy
+base_config: configs/base_configs/3d_base_config.yaml
+
+model: Tucker
+end_reso: 1024
+num_iterations: 69984
+#max_batch_size: 16384 #512**2 1024**2 too big
+
+seeds: [0, 1, 2]
+
+init_reso_arr:
+    - 64
+    - 1024
+max_ranks_arr:
+    - 180
+    # - 138
+    # - 124
+

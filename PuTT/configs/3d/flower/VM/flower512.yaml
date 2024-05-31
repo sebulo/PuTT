@@ -1,0 +1,16 @@
+target: data/3d_data/downsampled_volumes_flower/flower_512.raw
+base_config: configs/base_configs/3d_base_config.yaml
+
+model: VM
+end_reso: 512
+num_iterations: 13824 # 3*3072
+
+
+init_reso_arr:
+    - 8
+    - 512
+max_ranks_arr:
+    - 5
+    - 4
+    - 1
+

@@ -1,0 +1,19 @@
+target: data/3d_data/downsampled_volumnes_isotropic/isotropic64.npy
+base_config: configs/base_configs/3d_base_config.yaml
+
+model: VM
+end_reso: 64
+num_iterations: 512
+
+init_reso_arr:
+    - 8
+    - 64
+max_ranks_arr:
+    - 8
+    - 3
+    - 1
+
+
+
+
+

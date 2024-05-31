@@ -1,0 +1,19 @@
+target: data/3d_data/downsampled_volumnes_isotropic/isotropic128.npy
+base_config: configs/base_configs/3d_base_config.yaml
+
+model: Tucker
+end_reso: 128
+num_iterations: 1536
+
+init_reso_arr:
+    - 8
+    - 128
+max_ranks_arr:
+    - 57
+    - 44
+    - 32
+
+
+
+
+

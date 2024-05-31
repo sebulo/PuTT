@@ -1,0 +1,77 @@
+# target: bird_landscape
+target: data/images/tokyo_downsampled_images/tokyo_2k.png
+# target: data/images/girl_downsampled_images/girl_2k.png
+#base_config: configs/base_configs/2d_base_config_noise.yaml
+base_config: configs/base_configs/2d_base_config_subset_sampling.yaml
+model: QTT
+# lr: 0.01
+lr: 0.005 # TT
+#lr_arr: [0.008, 0.005,0.003, 0.001, 0.0008]
+#end_reso: 4096
+# end_reso: 2048
+end_reso: 1024
+# end_reso: 8192
+end_reso: 4096
+end_reso: 2048
+
+num_iterations: 2048
+
+# max_batch_size: 262144 #512^2
+max_batch_size: 65536 #256^2
+# max_batch_size: 16384 #128^2
+# max_batch_size: 4096 #128^2
+# max_batch_size: 1024 #128^2
+
+# canonization: left
+
+use_wandb: 0
+save_training_images: 1
+use_tqdm: 1
+wandb_limited_logging: 0
+compute_reconstruction: 1
+
+subset_to_train_on: 0.5
+default_val_for_non_sampled: 0.0
+masked_avg_pooling: 1
+plot_subsampled_target: 1
+
+factor_reduce_lr_based_on_noise: 0.02
+
+seeds : [0]
+init_reso_arr:
+    - 1024
+    - 128
+    - 32 
+    - 64
+    - 128
+    - 256
+    - 512
+    - 1024
+    - 2048
+    - 4096
+    - 8192
+max_ranks_arr:
+    - 150
+    # - 218
+
+iterations_for_upsampling_arr:
+#    - []
+   - [32, 64, 128, 256, 512]
+#    - [ 50, 100, 200, 400, 600, 1000]
+#    - [ 64, 128, 256, 512, 1024]
+
+#use_TTNF_sampling: 1
+# payload: 3
+# payload_position: first_core
+
+
+lr_decay_factor: 0.9
+lr_decay_factor_until_next_upsampling: 0.1
+warmup_steps: 200
+
+log_every: 50
+show_end_results_locally: 0
+
+plot_upsampling: 0
+save_every_start_iteration: 1 
+calculate_psnr_while_training: 1

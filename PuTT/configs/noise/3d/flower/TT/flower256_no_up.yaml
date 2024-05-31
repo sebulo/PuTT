@@ -1,0 +1,14 @@
+target: data/3d_data/downsampled_volumes_flower/flower_256.raw
+base_config: configs/base_configs/3d_base_config_noise.yaml
+
+model: QTT
+lr: 0.005
+end_reso: 256
+
+
+init_reso_arr:
+    - 256
+max_ranks_arr:
+    - 195
+
+

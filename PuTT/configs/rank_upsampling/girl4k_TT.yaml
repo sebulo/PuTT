@@ -1,0 +1,37 @@
+target: data/images/girl_downsampled_images/girl_4k.png
+base_config: configs/base_configs/2d_base_config_rank_upsampling.yaml
+
+exp_name: rank_upsampling_images
+
+model: QTT
+end_reso: 4096
+num_iterations: 4096
+seeds: [0,1]
+
+iterations_for_upsampling_arr: [[]]
+init_reso_arr:
+    - 4096
+max_ranks_arr:
+    - 300
+
+lr_arr:
+    - 0.008
+    - 0.003
+
+rank_upsampling_rank_range_arr:
+    #- []
+    - [100, 300, 2]
+    - [100, 300, 4]
+    - [100, 300, 8]
+    - [200, 300, 2]
+    - [200, 300, 4]
+    - [200, 300, 8]
+
+rank_upsamp ling_iteration_range_arr:
+    #- []
+    - [100, 2000]
+    - [100, 4000]
+    - [250, 2000]
+    - [250, 4000]
+    - [250, 2500]
+    - [250, 3000]

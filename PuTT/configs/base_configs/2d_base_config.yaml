@@ -1,0 +1,31 @@
+exp_name: bs512_color
+model: QTT
+dimensions: 2
+use_wandb: 1
+use_tqdm: 0
+save_images_locally_wandb: 1
+use_TTNF_sampling: 0
+payload: 3
+payload_position: first_core
+num_iterations: 10000
+lr: 0.01
+lr_decay_factor: 0.9
+lr_decay_factor_until_next_upsampling: 0.1
+warmup_steps: 50
+canonization: middle
+compression_alg: compress_all
+max_batch_size: 262144 #512**2
+
+iterations_for_upsampling_arr: [[],[64,128,256],[64,128,256,512],[64,128,256,512,1024],[64,128,256,512,1024,2048],[64,128,256,512,1024,2048,4096]]
+
+tilt_angle_arr: [0]
+tilting_mode: 0
+noise_type_arr: [None]
+noise_std_arr: [0]
+regularization_type: None
+regularization_weight: 0.00
+compute_reconstruction: 1
+calculate_psnr_while_training: 0
+seeds: [0,1,2]
+
+save_learned_recon: 0

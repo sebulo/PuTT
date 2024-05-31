@@ -1,0 +1,20 @@
+target: data/images/marseille_4k.png
+base_config: configs/base_configs/2d_base_config_subset_sampling.yaml
+
+model: Tucker
+end_reso: 4096
+
+init_reso_arr:
+    - 16
+    - 32
+    - 64
+    - 128
+    - 256
+    - 512
+    - 1024
+    - 2048
+    - 4096
+max_ranks_arr:
+    # - 95
+    - 175
+

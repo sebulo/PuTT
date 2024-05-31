@@ -1,0 +1,14 @@
+target: data/images/tokyo_downsampled_images/tokyo_4k.png
+base_config: configs/base_configs/2d_base_config_noise.yaml
+
+model: Tucker
+end_reso: 4096
+
+init_reso_arr:
+    - 128
+    - 4096
+max_ranks_arr:
+    - 95
+    # - 175
+
+

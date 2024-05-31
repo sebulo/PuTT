@@ -1,0 +1,24 @@
+target: data/3d_data/downsampled_volumes_flower/flower_256.raw
+base_config: configs/base_configs/3d_base_config_upsampling.yaml
+
+model: Tucker
+end_reso: 256
+num_iterations: 1536
+
+init_reso_arr:
+    - 4
+    - 8
+    - 16
+    - 32
+    - 64
+    - 128
+    - 256
+max_ranks_arr:
+    - 9
+    - 5
+
+lr_arr: [ 0.01]
+
+use_wandb: 1
+use_tqdm: 0
+wandb_limited_logging: 0

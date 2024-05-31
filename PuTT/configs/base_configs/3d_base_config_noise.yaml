@@ -1,0 +1,38 @@
+model: QTT
+exp_name: noise_exp_bs4096
+dimensions: 3
+use_wandb: 1
+use_tqdm: 0
+save_images_locally_wandb: 1
+
+use_TTNF_sampling: 0
+payload: 0
+payload_position: grayscale
+
+num_iterations: 9216 #  4608*3
+#num_iterations: 4096 #  4608*3
+lr_decay_factor: 0.9
+lr_decay_factor_until_next_upsampling: 0.1
+warmup_steps: 50
+canonization: middle
+compression_alg: compress_all
+max_batch_size: 4096 # 64**2 8192 # 128**2
+lr: 0.01
+
+factor_reduce_lr_based_on_noise: 0.01
+
+iterations_for_upsampling_arr: [[48,144,432,1296, 2592],[]]
+
+tilt_angle_arr: [0]
+tilting_mode: 0
+# noise_type_arr: [ gaussian]
+noise_type_arr: [None, gaussian, laplace]
+
+noise_std_arr: [0, 0.05, 0.1, 0.2, 0.5, 1.0]
+
+regularization_type: None
+regularization_weight: 0.00
+compute_reconstruction: 1
+calculate_psnr_while_training: 0
+
+seeds: [0, 1, 2]

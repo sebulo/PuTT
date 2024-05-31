@@ -1,0 +1,25 @@
+target: data/3d_data/downsampled_volumes_flower/flower_1024.raw
+base_config: configs/base_configs/3d_base_config.yaml
+
+model: QTT
+lr: 0.008
+end_reso: 1024
+num_iterations: 69984
+
+init_reso_arr:
+    - 64
+    - 1024
+max_ranks_arr:
+    - 420
+    - 300
+    - 250
+
+
+
+#use_TTNF_sampling: 0
+#payload: 0
+#payload_position: grayscale
+
+use_TTNF_sampling: 1
+payload: 1
+payload_position: first_core

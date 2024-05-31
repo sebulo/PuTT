@@ -1,0 +1,52 @@
+
+dataset_name = nsvf
+datadir = ./data/Synthetic_NSVF/Robot
+expname = Robot
+basedir = ./log/PuTT-upsampling_big_nsvf
+
+i_wandb = 1
+
+n_iters = 80000
+warmup_steps = 100
+batch_size = 4096
+lr_init = 0.0008 # Voxel representation
+lr_init_shader = 0.001 # MLP AND SHADER
+lr_upsample_reset = 1 # reset optimizer when upsampling
+lr_decay_target_ratio = 0.08 # 'the target decay ratio; after decay_iters inital lr decays to lr*ratio'
+lr_decay_iters = -1 # number of iterations the lr will decay to the target ratio; -1 will set it to n_iters
+
+
+N_voxel_init = 4096 #16**3
+
+#N_voxel_final = 16777216 # 256**3
+N_voxel_final = 134217728 #512**3
+
+upsample_list = [250, 500, 2000, 4000, 8000]
+update_AlphaMask_list = [2000,4000]
+model_name = TensorTT
+
+use_TTNF_sampling = 1
+
+N_vis = 5
+vis_every = 50001
+
+render_test = 1
+max_rank_appearance = 800
+max_rank_density = 550
+
+nSamples = 2500
+
+shadingMode = MLP_Fea
+fea2denseAct = softplus
+
+view_pe = 2
+fea_pe = 2
+
+
+#TV_weight_density = 0.1
+#TV_weight_app = 0.01
+
+L1_weight_inital = 1e-5
+L1_weight_rest = 1e-5
+
+rm_weight_mask_thre = 1e-4

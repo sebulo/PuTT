@@ -1,0 +1,15 @@
+target: data/images/girl_downsampled_images/girl_8k.png
+base_config: configs/base_configs/2d_base_config.yaml
+
+model: CP
+end_reso: 8192
+num_iterations: 8192
+
+init_reso_arr:
+    - 128
+    - 8192
+max_ranks_arr:
+    - 145
+    - 85
+    - 33
+

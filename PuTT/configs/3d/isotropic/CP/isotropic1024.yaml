@@ -1,0 +1,23 @@
+target: data/3d_data/downsampled_volumnes_isotropic/isotropic1024.npy
+base_config: configs/base_configs/3d_base_config.yaml
+
+model: CP
+end_reso: 1024
+
+num_iterations: 69984
+#max_batch_size: 65536 #512**2 1024**2 too big
+max_batch_size: 262144 #512**2 1024**2 too big
+
+init_reso_arr:
+    - 64
+    - 1024
+max_ranks_arr:
+    - 755
+    - 1035
+    - 2000
+
+
+
+#use_TTNF_sampling: 0
+#payload: 0
+#payload_position: grayscale

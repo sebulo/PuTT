@@ -1,0 +1,47 @@
+
+dataset_name = nsvf
+datadir = ./data/Synthetic_NSVF/Toad
+expname = Toad
+basedir = ./log/tensorf-VM_7MB
+
+
+n_iters = 80000
+batch_size = 4096
+
+N_voxel_init = 4096 #16**3
+N_voxel_final = 16777216 # 256**3
+
+upsample_list = [250, 500, 2000, 4000]
+update_AlphaMask_list = [2000,4000]
+nSamples = 884
+
+N_vis = 5
+vis_every = 40000
+
+render_test = 1
+
+n_lamb_sigma = [4,4,4]
+n_lamb_sh = [5,5,5]
+model_name = TensorVMSplit
+data_dim_color = 23
+
+shadingMode = MLP_Fea
+fea2denseAct = softplus
+
+view_pe = 2
+fea_pe = 2
+
+L1_weight_inital = 8e-5
+L1_weight_rest = 4e-5
+rm_weight_mask_thre = 1e-4
+
+i_wandb = 1
+should_shrink = 0
+
+## please uncomment following configuration if hope to training on cp model
+#model_name = TensorCP
+#n_lamb_sigma = [96]
+#n_lamb_sh = [288]
+#N_voxel_final = 125000000 # 500**3
+#L1_weight_inital = 1e-5
+#L1_weight_rest = 1e-5

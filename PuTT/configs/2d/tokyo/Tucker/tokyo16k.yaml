@@ -1,0 +1,14 @@
+target: data/images/tokyo_downsampled_images/tokyo_16k.png
+base_config: configs/base_configs/2d_base_config.yaml
+
+model: Tucker
+end_reso: 16384
+num_iterations: 16384
+
+init_reso_arr:
+    - 128
+    - 16384
+max_ranks_arr:
+    - 107
+    - 68
+    # - 34

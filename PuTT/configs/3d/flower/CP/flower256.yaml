@@ -1,0 +1,15 @@
+target: data/3d_data/downsampled_volumes_flower/flower_256.raw
+base_config: configs/base_configs/3d_base_config.yaml
+
+model: CP
+end_reso: 256
+num_iterations: 4608
+
+init_reso_arr:
+    - 8
+    - 256
+max_ranks_arr:
+    - 2180
+    - 1070
+    - 370
+

@@ -1,0 +1,19 @@
+target: data/3d_data/downsampled_volumnes_isotropic/isotropic1024.npy
+base_config: configs/base_configs/3d_base_config.yaml
+
+model: VM
+end_reso: 1024
+num_iterations: 69984
+
+init_reso_arr:
+    - 64
+    - 1024
+max_ranks_arr:
+    - 2
+    - 1
+
+
+
+#use_TTNF_sampling: 0
+#payload: 0
+#payload_position: grayscale

@@ -1,0 +1,26 @@
+target: data/images/girl_downsampled_images/girl_16k.png
+base_config: configs/base_configs/2d_base_config.yaml
+
+model: QTT
+lr: 0.005
+end_reso: 16384
+num_iterations: 16384
+
+init_reso_arr:
+    - 128
+    - 16384
+max_ranks_arr:
+    - 450
+    # - 400
+    # - 300
+    # - 200
+
+
+
+#use_TTNF_sampling: 0
+#payload: 0
+#payload_position: grayscale
+
+use_TTNF_sampling: 1
+payload: 3
+payload_position: first_core

@@ -1,0 +1,16 @@
+target: data/images/girl_downsampled_images/girl_4k.png
+base_config: configs/base_configs/2d_base_config.yaml
+
+model: CP
+end_reso: 4096
+num_iterations: 4096
+
+init_reso_arr:
+    - 128
+    - 4096
+max_ranks_arr:
+    - 180
+    - 92
+    - 28
+
+

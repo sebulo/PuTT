@@ -1,0 +1,13 @@
+target: data/images/girl_downsampled_images/girl_4k.png
+base_config: configs/base_configs/2d_base_config_noise.yaml
+
+model: QTT
+lr: 0.005
+end_reso: 4096
+
+init_reso_arr:
+    - 4096
+max_ranks_arr:
+    # - 200
+    - 300
+

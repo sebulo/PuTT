@@ -1,0 +1,48 @@
+model: QTT
+exp_name: num_upsampling_steps_final
+dimensions: 2
+
+payload: 0
+use_wandb: 1
+use_tqdm: 0
+save_images_locally_wandb: 1
+
+
+#num_iterations_arr: [1536, 2048, 4096]
+num_iterations_arr: [768, 1024, 2048, 4096, 8192, 16384, 32768]
+num_iterations_arr: [ 16384, 32768]
+num_iterations_arr: [16384]
+
+# LR stuff 
+lr: 0.01
+lr_decay_factor: 0.9
+lr_decay_factor_until_next_upsampling: 0.1
+warmup_steps: 50
+
+canonization: middle
+compression_alg: compress_all
+
+max_batch_size: 4096 # 64**2 
+
+# upsampling
+seeds: [0, 1, 2]
+batch_size_arr: [262144] 
+lr_arr: [0.005]
+
+
+iterations_for_upsampling_arr: [[64,128,256,512,1024, 1536, 2560],[64,128,256,512,1024, 1536, 2048], [64,128,256,512,1024, 2048],[64, 128,256,512,1024],[128,256,512,1024],[256,512,1024], [512,1024], [1024], []]
+
+# Tilting
+tilt_angle_arr:
+  - 0
+tilting_mode: 0
+
+# Regularization
+regularization_type: None
+regularization_weight: 0.00
+
+compute_reconstruction: 1
+calculate_psnr_while_training: 0
+
+
+
