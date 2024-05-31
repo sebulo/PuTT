@@ -4,7 +4,7 @@ This repository contains a pytorch implementation for the paper: [TensoRF: Tenso
 **fast** training process, **compact** memory footprint and **state-of-the-art** rendering quality.<br><br>
 
 
-This repository offers a PyTorch implementation of the "Coarse-To-Fine Tensor Trains for Compact and Robust Visual Representations" method, described in our [paper](https://link-to-paper). It features our Prolongation Upsampling Tensor Train (PuTT) approach, designed for learning compact and robust Quantized Tensor Train representations of large dimensional tensors, e.g. images, volumes.
+This repository offers a PyTorch implementation of the "Coarse-To-Fine Tensor Trains for Compact Visual Representations" method, described in our [paper](https://link-to-paper). It features our Prolongation Upsampling Tensor Train (PuTT) approach, designed for learning compact Quantized Tensor Train representations of large dimensional tensors, e.g. images, volumes.
 
 ## Repository Structure
 The repository is organized into two main components:
