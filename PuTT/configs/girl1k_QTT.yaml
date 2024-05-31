@@ -4,20 +4,25 @@ base_config: configs/base_configs/2d_base_config.yaml
 use_wandb: 0
 
 model: QTT
+
 lr: 0.008
 
-
-payload : 3
+payload: 3
 payload_position: first_core
 
 num_iterations: 1024
 max_batch_size: 262144 # 256^2
 
-seed : 42
+seed: 42
 
 init_reso: 64
 end_reso: 1024
-iterations_for_upsampling: [ 25,75,150,450]
+
+iterations_for_upsampling: 
+  - 25
+  - 75
+  - 150
+  - 450
 
 max_rank: 200
 
@@ -27,16 +32,13 @@ lr_decay_factor: 0.9
 lr_decay_factor_until_next_upsampling: 0.1
 warmup_steps: 5
 
-
 log_every: 5
 show_end_results_locally: 1
 plot_upsampling: 0
 save_every_start_iteration: 1 
 calculate_psnr_while_training: 1
 
-
 save_training_images: 1
 use_tqdm: 1
 wandb_limited_logging: 0
 compute_reconstruction: 0
-
