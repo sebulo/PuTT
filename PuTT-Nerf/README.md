@@ -21,36 +21,28 @@ python train.py --config configs/PuTT_hotdog.txt
 ```
 
 
-we provide a few examples in the configuration folder, please note:
+We provide a few examples in the configuration folder. Please note the following parameters:
 
- `dataset_name`, choices = ['blender', 'llff', 'nsvf', 'tankstemple'];
+- `dataset_name`: choices = ['blender', 'llff', 'nsvf', 'tankstemple'];
+- `shadingMode`: choices = ['MLP_Fea', 'SH'];
+- `model_name`: choices = ['TensorTT', 'TensorVMSplit', 'TensorCP'], corresponding to the Quantized Tensor Train, the VM, and CP decomposition.
+- `max_rank`: parameter for the rank of the Tensor Train.
+- `fused`: flag to use the fused version of the model, where both appearance and density are modeled by the same tensor. With `fused` set to 0, the model will use separate tensors for appearance and density, allowing different ranks for the two tensors, which can be useful for some datasets, e.g., `max_rank_appearance: 250` and `max_rank_density: 150`.
+- `use_TTNF_sampling`: parameter for choosing V2 sampling as used by TT-NF.
+- `upsample_list`: determines iterations to perform upsampling.
+- `update_AlphaMask_list`: specifies iterations to update the alpha mask.
+- `n_lamb_sigma` and `n_lamb_sh`: string type parameters referring to the basis number of density and appearance along the XYZ dimension.
+- `N_voxel_init`: controls the initial resolution of the grid (e.g., `N_voxel_init = 4096` for a 16³ grid).
+- `N_voxel_final`: controls the final resolution of the grid (e.g., `N_voxel_final = 16777216` for a 256³ grid). The grid is upsampled in steps equal to the length of `upsample_list`. For QTT, the grid dimensions should be powers of 2.
+- `N_vis`: controls the number of visualizations during training.
+- `vis_every`: specifies the frequency (in iterations) for visualizations.
+- `render_test`: set to 1 to render testing views after training.
+- `max_rank_appearance`: maximum rank for the appearance tensor (default: 280).
+- `max_rank_density`: maximum rank for the density tensor (default: 200).
 
- `shadingMode`, choices = ['MLP_Fea', 'SH'];
+You need to set `--render_test 1`/`--render_path 1` if you want to render testing views or paths after training. 
 
- `model_name`, choices = ['TensorTT', TensorVMSplit', 'TensorCP'], corresponding to the Tensor Train, the VM and CP decomposition. 
- You need to uncomment the last a few rows of the configuration file if you want to training with the TensorCP model；
-
- 'max_rank' is paramter for the rank of the Tensor Train.
-
-`fused` is a flag to use the fused version of the model, where both appearance and density is modeled by the same tensor. With fused set to 0, the model will use separate tensors for appearance and density. This enables the use of different ranks for the two tensors, which can be useful for some datasets, e.g. `max_rank_appearance: 250` and `max_rank_density: 150`.
-
- 'use_TTNF_sampling' is paramter for choosing V2 sampling as used by TT-NF.
-
- 'upsample_list' determines iterations to perform upsampling.
-
- `n_lamb_sigma` and `n_lamb_sh` are string type refer to the basis number of density and appearance along XYZ
-dimension;
-
- `N_voxel_init` and `N_voxel_final` control the resolution of the grid, which is initialized with `N_voxel_init` and
- upsampled to `N_voxel_final` in number of steps equal to the length of `upsample_list`. For QTT the grid dim should be powers of 2., e.g. `N_voxel_init = 32**3` and `N_voxel_final = 256**3`;
-
- `N_vis` and `vis_every` control the visualization during training;
-
-
-  
-You need to set `--render_test 1`/`--render_path 1` if you want to render testing views or path after training. 
-
-More options refer to the `opt.py`. 
+For more options, refer to `opt.py`. 
 
 
 ## Rendering
