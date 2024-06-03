@@ -1,8 +1,5 @@
 # Coarse-To-Fine Tensor Trains for Compact Visual Representations
 ## [Project page](https://sebulo.github.io/PuTT_website/) |  [Paper](https://link-to-paper)
-This repository contains a pytorch implementation for the paper: [TensoRF: Tensorial Radiance Fields](https://arxiv.org/abs/2203.09517). Our work present a novel approach to model and reconstruct radiance fields, which achieves super
-**fast** training process, **compact** memory footprint and **state-of-the-art** rendering quality.<br><br>
-
 
 This repository offers a PyTorch implementation of the "Coarse-To-Fine Tensor Trains for Compact Visual Representations" method, described in our [paper](https://link-to-paper). It features our Prolongation Upsampling Tensor Train (PuTT) approach, designed for learning compact Quantized Tensor Train representations of large dimensional tensors, e.g. images, volumes.
 
