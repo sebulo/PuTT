@@ -1,5 +1,5 @@
 # PuTT
-## [Project page](https://sebulo.github.io/PuTT_website/) |  [Paper](https://link-to-paper)
+## [Project page](https://sebulo.github.io/PuTT_website/) |  [Paper](https://arxiv.org/abs/2406.04332)
 This repository contains a pytorch implementation for Coarse-To-Fine Tensor Trains for Compact Visual Representations and our method Prolongation Upsampling Tensor Train (PuTT).<br>
 
 ### Installation
