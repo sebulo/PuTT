@@ -1,5 +1,5 @@
 # Coarse-To-Fine Tensor Trains for Compact Visual Representations
-## [Project page](https://sebulo.github.io/PuTT_website/) |  [Paper]([https://arxiv.org/abs/2406.04332])
+## [Project page](https://sebulo.github.io/PuTT_website/) |  [Paper](https://arxiv.org/abs/2406.04332)
 
 This repository offers a PyTorch implementation of the "Coarse-To-Fine Tensor Trains for Compact Visual Representations" method, described in our [paper](https://arxiv.org/abs/2406.04332) and published in the proceedings of the International Conference on Machine Learning (ICML) 2024. It features our Prolongation Upsampling Tensor Train (PuTT) approach, designed for learning compact Quantized Tensor Train representations of large dimensional tensors, e.g., images, and volumes.
 
