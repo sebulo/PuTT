@@ -76,11 +76,13 @@ The code performs logging to the console (if use_tqdm is True) and also [Weights
 ## Citation
 If you find our code or paper helps, please consider citing:
 ```
-@INPROCEEDINGS{loeschckePuTT,
-  author = {Sebastian Loeschcke and Dan Wang and Christian Leth-Espensen and Serge Belongie and Michael Kastoryano and Sagie Benaim},
-  title = {Coarse-To-Fine Tensor Trains for Compact Visual Representations},
-  booktitle = {},
-  year = {2023}
+@misc{loeschcke2024coarsetofine,
+      title={Coarse-To-Fine Tensor Trains for Compact Visual Representations}, 
+      author={Sebastian Loeschcke and Dan Wang and Christian Leth-Espensen and Serge Belongie and Michael J. Kastoryano and Sagie Benaim},
+      year={2024},
+      eprint={2406.04332},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }
 ```
 
