@@ -1,5 +1,5 @@
 # PuTT NeRF
-## [Project page](https://sebulo.github.io/PuTT_website/) |  [Paper](https://link-to-paper)
+## [Project page](https://sebulo.github.io/PuTT_website/) |  [Paper](https://arxiv.org/abs/2406.04332)
 
 This repository contains a pytorch implementation for our Prolongation Upsampling Tensor Train (PuTT) method applied to Novel View Synthesis .<br><br>
 ## Installation
@@ -72,11 +72,13 @@ The code performs logging to the console, tensorboard file in the experiment log
 ## Citation
 If you find our code or paper helps, please consider citing:
 ```
-@INPROCEEDINGS{loeschckePuTT,
-  author = {Sebastian Loeschcke and Dan Wang and Christian Leth-Espensen and Serge Belongie and Michael Kastoryano and Sagie Benaim},
-  title = {Coarse-To-Fine Tensor Trains for Compact Visual Representations},
-  booktitle = {},
-  year = {2023}
+@misc{loeschcke2024coarsetofine,
+      title={Coarse-To-Fine Tensor Trains for Compact Visual Representations}, 
+      author={Sebastian Loeschcke and Dan Wang and Christian Leth-Espensen and Serge Belongie and Michael J. Kastoryano and Sagie Benaim},
+      year={2024},
+      eprint={2406.04332},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }
 ```
 
